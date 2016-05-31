@@ -27,6 +27,6 @@
 [AndroidRepo]: <https://github.com/MTG-Helper/android>
 [WindowsPhoneRepo]: <https://github.com/MTG-Helper/windows-phone>
 [AndroidStudio]:  <https://developer.android.com/studio/index.html>
- 
+[VisualStudio2015]: <https://www.visualstudio.com/products/visual-studio-community-vs>
 
 
