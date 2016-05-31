@@ -22,10 +22,10 @@
 - 
 
 
-[Documento de Visión y Alcance]: <https://gitlab.com/MTG-Helper/android/wikis/documento-de-vision-y-alcance>
-[Visual Story Mapping]: <https://gitlab.com/MTG-Helper/android/wikis/visual-story-mapping>
-[AndroidRepo]: <https://gitlab.com/MTG-Helper/android>
-[WindowsPhoneRepo]: <https://gitlab.com/MTG-Helper/windows-phone>
+[Documento de Visión y Alcance]: <https://github.com/MTG-Helper/android/blob/master/doc/DocumentoDeVisionYAlcance.md>
+[Visual Story Mapping]: <https://github.com/MTG-Helper/android/blob/master/doc/VisualStoryMapping.md>
+[AndroidRepo]: <https://github.com/MTG-Helper/android>
+[WindowsPhoneRepo]: <https://github.com/MTG-Helper/windows-phone>
 [AndroidStudio]:  <https://developer.android.com/studio/index.html>
  
 
