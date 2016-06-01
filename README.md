@@ -2,12 +2,16 @@
 
 # [Visual Story Mapping]
 
+# Sprint
+
+* [Sprint 0 Planning] 
+* [Sprint 0 Review] 
+* [Sprint 1 Planning] 
+
 # Repositories
 
 * [AndroidRepo] 
 * [WindowsPhoneRepo] 
-
-
 
 # Tech
 
@@ -28,5 +32,7 @@
 [WindowsPhoneRepo]: <https://github.com/MTG-Helper/windows-phone>
 [AndroidStudio]:  <https://developer.android.com/studio/index.html>
 [VisualStudio2015]: <https://www.visualstudio.com/products/visual-studio-community-vs>
-
+[Sprint 0 Planning]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint0Start.md>
+[Sprint 0 Review]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint0End.md>
+[Sprint 1 Planning]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint1Start.md>
 
