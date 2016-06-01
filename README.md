@@ -19,7 +19,7 @@
 
 ###Windows Phone
 #####IDE
-- 
+* [VisualStudio2015] 
 
 
 [Documento de Visión y Alcance]: <https://github.com/MTG-Helper/android/blob/master/doc/DocumentoDeVisionYAlcance.md>
