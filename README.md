@@ -8,6 +8,10 @@
 * [Sprint 0 Review] 
 * [Sprint 1 Planning] 
 
+# Caso de Uso
+* [CU 1] 
+* [CU 2] 
+
 # Repositories
 
 * [AndroidRepo] 
@@ -35,4 +39,6 @@
 [Sprint 0 Planning]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint0Start.md>
 [Sprint 0 Review]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint0End.md>
 [Sprint 1 Planning]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint1Start.md>
+[CU 1]: <https://github.com/MTG-Helper/android/blob/master/doc/>
+[CU 2]: <https://github.com/MTG-Helper/android/blob/master/doc/>
 
