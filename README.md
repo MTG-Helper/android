@@ -28,7 +28,8 @@
 ###Windows Phone
 #####IDE
 * [VisualStudio2015] 
-
+#####Continuous Integration
+* [AppVeyor] 
 
 [Documento de Visión y Alcance]: <https://github.com/MTG-Helper/android/blob/master/doc/DocumentoDeVisionYAlcance.md>
 [Visual Story Mapping]: <https://github.com/MTG-Helper/android/blob/master/doc/VisualStoryMapping.md>
@@ -41,4 +42,4 @@
 [Sprint 1 Planning]: <https://github.com/MTG-Helper/android/blob/master/doc/Sprint1Start.md>
 [CU 1]: <https://github.com/MTG-Helper/android/blob/master/doc/>
 [CU 2]: <https://github.com/MTG-Helper/android/blob/master/doc/>
-
+[AppVeyor]: <http://www.appveyor.com/>
