@@ -50,5 +50,6 @@
     <string name="action_settings">Settings</string>
     <string name="downone">-1</string>
     <string name="upone">+1</string>
+    <string name="title_activity_test">TestActivity</string>
 
 </resources>
