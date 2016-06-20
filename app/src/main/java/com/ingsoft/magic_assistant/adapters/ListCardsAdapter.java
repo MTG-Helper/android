@@ -65,12 +65,16 @@ public class ListCardsAdapter extends BaseAdapter {
     private void setContenido(View view, Card disciplina) {
         TextView cardNameView = (TextView) view.findViewById(R.id.list_item_title);
         cardNameView.setText(disciplina.getName());
-        TextView cardlevelView = (TextView) view.findViewById(R.id.list_item_subtitle);
+
+        //Check info to show
+
+       /* TextView cardlevelView = (TextView) view.findViewById(R.id.list_item_subtitle);
         cardlevelView.setText("Level: " + disciplina.getLevel());
         TextView cardSchemaView = (TextView) view.findViewById(R.id.list_item_right_text);
         cardSchemaView.setText(disciplina.getSchedule());
         ImageView cardImagenView = (ImageView) view.findViewById(R.id.imagendedeporte);
-        cardImagenView.setImageResource(disciplina.getLogoResId());
+        cardImagenView.setImageResource(disciplina.getLogoResId());*/
+
     }
 
 }
