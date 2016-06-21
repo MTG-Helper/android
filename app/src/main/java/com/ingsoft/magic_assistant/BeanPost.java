@@ -1,8 +1,11 @@
 package com.ingsoft.magic_assistant;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import com.google.gson.annotations.SerializedName;
 
-public class BeanPost {
+public class BeanPost implements Parcelable{
 
     @SerializedName("post_name")
     private String post_name;
@@ -19,6 +22,25 @@ public class BeanPost {
         this.date = date;
         this.description = description;
     }
+
+    protected BeanPost(Parcel in) {
+        post_name = in.readString();
+        auther = in.readString();
+        date = in.readString();
+        description = in.readString();
+    }
+
+    public static final Creator<BeanPost> CREATOR = new Creator<BeanPost>() {
+        @Override
+        public BeanPost createFromParcel(Parcel in) {
+            return new BeanPost(in);
+        }
+
+        @Override
+        public BeanPost[] newArray(int size) {
+            return new BeanPost[size];
+        }
+    };
 
     public String getPost_name() {
         return post_name;
@@ -51,4 +73,18 @@ public class BeanPost {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(post_name);
+        dest.writeString(auther);
+        dest.writeString(date);
+        dest.writeString(description);
+    }
+
 }
