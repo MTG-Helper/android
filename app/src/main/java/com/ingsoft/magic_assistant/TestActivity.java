@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import java.io.IOException;
+import java.io.InputStream;
+
 public class TestActivity extends AppCompatActivity {
 
     @Override
@@ -24,6 +27,22 @@ public class TestActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    public String loadJSONFromAsset() {
+        String json;
+        try {
+            InputStream is = getAssets().open("SOI.json");
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        } catch (IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+        return json;
     }
 
 }
