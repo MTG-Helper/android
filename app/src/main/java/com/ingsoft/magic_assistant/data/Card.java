@@ -3,10 +3,9 @@ package com.ingsoft.magic_assistant.data;
 import android.content.Context;
 import android.os.Parcel;
 import android.os.Parcelable;
-
+import com.google.gson.annotations.SerializedName;
 
 public class Card implements Parcelable{
-
 
     private int cmc = 0;
     private String colorIdentity = "";//ver :es una lista
@@ -17,16 +16,27 @@ public class Card implements Parcelable{
     private String layout = "";
     private String manaCost = "";
     private int multiverseid = 0;
+
+    @SerializedName("name")
     private String name = "";
+
+    @SerializedName("number")
     private String number = "";
+
     private String power = "";
+
+    @SerializedName("rarity")
     private String rarity = "";
     private String subtypes = ""; //ver: una lista
+
+    @SerializedName("text")
     private String text = "";
     private String toughness = "";
     private String type = "";
     private String types = "";//ver: es lista
 
+
+    @SerializedName("artist")
     private String artist = "";
 
 
@@ -90,6 +100,8 @@ public class Card implements Parcelable{
             return new Card[size];
         }
     };
+
+    public Card(){}
 
     public Card(String artist, int cmc, String colorIdentity, String colors, String flavor, String id, String imageName, String layout, String manaCost, int multiverseid, String name, String number, String power, String rarity, String subtypes, String text, String toughness, String type, String types) {
         this.artist = artist;

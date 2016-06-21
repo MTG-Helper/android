@@ -29,6 +29,7 @@ public class CardsListFragment extends Fragment {
         ListCardsAdapter listaAdaptada = new ListCardsAdapter(this, CardStore.getAll(this.getContext()));
         lista.setAdapter(listaAdaptada);
         return view;
+
     }
 
     public void armarLista(List<Card> disciplinas) {
