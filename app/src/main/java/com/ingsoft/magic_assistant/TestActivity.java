@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
+import com.ingsoft.magic_assistant.data.Card;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -55,8 +56,10 @@ public class TestActivity extends AppCompatActivity {
 
             @Override
             protected Void doInBackground(Void... voids) {
-                Type listType = new TypeToken<ArrayList<BeanPost>>(){}.getType();
-                beanPostArrayList = new GsonBuilder().create().fromJson(loadJSONFromAsset(), listType);
+                Type listType = new TypeToken<ArrayList<Card>>(){}.getType();
+                //Type listType = new TypeToken<ArrayList<BeanPost>>(){}.getType();
+                beanPostArrayList = new GsonBuilder().create().fromJson(
+                        loadJSONFromAsset(), listType);
                 postList=new StringBuffer();
                 for(BeanPost post: beanPostArrayList){
                     postList.append("\n title: "+post.getPost_name()+"\n auther: "+post.getAuther()+"\n date: "+post.getDate()+"\n description: "+post.getDescription()+"\n\n");
@@ -76,11 +79,11 @@ public class TestActivity extends AppCompatActivity {
 
 
 
-    /*
+
     public String loadJSONFromAsset() {
         String json;
         try {
-            InputStream is = getAssets().open("SOI.json");
+            InputStream is = getAssets().open("game_data/SOI.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -92,11 +95,11 @@ public class TestActivity extends AppCompatActivity {
         }
         return json;
     }
-    */
 
 
 
-    public String loadJSONFromAsset() {
+
+    public String loadJSONFromAssetDummy() {
         String json = null;
         try {
             InputStream is = getAssets().open("game_data/json.json");
