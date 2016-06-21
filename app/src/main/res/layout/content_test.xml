@@ -21,4 +21,12 @@
         android:layout_alignParentEnd="true"
         android:layout_marginRight="109dp"
         android:layout_marginEnd="109dp" />
+
+    <TextView
+        android:id="@+id/txtPostList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+
 </RelativeLayout>
