@@ -29,7 +29,9 @@
 * [VisualStudio2015] 
 
 #####Continuous Integration
-* [AppVeyor] 
+* [AppVeyor] para Windows Phone
+* [CircleCI] para Android
+
 
 [Documento de Visión y Alcance]: <https://github.com/MTG-Helper/android/blob/master/doc/DocumentoDeVisionYAlcance.md>
 [Visual Story Mapping]: <https://github.com/MTG-Helper/android/blob/master/doc/VisualStoryMapping.md>
@@ -45,3 +47,4 @@
 [CU 1]: <https://github.com/MTG-Helper/android/blob/master/doc/>
 [CU 2]: <https://github.com/MTG-Helper/android/blob/master/doc/>
 [AppVeyor]: <http://www.appveyor.com/>
+[CircleCI]: <https://circleci.com/>
