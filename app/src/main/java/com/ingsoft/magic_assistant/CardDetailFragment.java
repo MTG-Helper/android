@@ -20,13 +20,16 @@ public class CardDetailFragment extends Fragment {
     }
 
     public void setDiscipline(Card card) {
-        ((TextView)getView().findViewById(R.id.detalle)).setText(card.getText());
+        //((TextView)getView().findViewById(R.id.detalle)).setText(card.getText());
+
+        ((TextView)getView().findViewById(R.id.detalle)).setText( card.getType() + card.getColorIdentity()+ card.getText() + card.getFlavor());
+
 
         //check info to show
-        //((TextView)getView().findViewById(R.id.horariodetail)).setText(card.getSchedule());
+        ((TextView)getView().findViewById(R.id.horariodetail)).setText(card.getRarity());
         //((TextView)getView().findViewById(R.id.precio)).setText(""+ card.getPrice());
-        //((TextView)getView().findViewById(R.id.leveldetail)).setText(""+ card.getLevel());
-        //((TextView)getView().findViewById(R.id.titulodetail)).setText(card.getName());
+       // ((TextView)getView().findViewById(R.id.leveldetail)).setText( card.getRarity());
+        ((TextView)getView().findViewById(R.id.titulodetail)).setText(card.getName());
         //((ImageView)getView().findViewById(R.id.imagendedeportedetalle)).setImageResource(card.getLogoResId());
     }
 
