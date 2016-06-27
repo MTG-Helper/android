@@ -167,8 +167,18 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
         int id = item.getItemId();
 
         if (id == R.id.nav_search) {
-        Intent myIntent = new Intent(HomeActivity.this,SearchMainActivity.class);
-        HomeActivity.this.startActivity(myIntent);
+            Intent myIntent = new Intent(HomeActivity.this,SearchMainActivity.class);
+            HomeActivity.this.startActivity(myIntent);
+        }
+
+        if (id == R.id.nav_coin ){
+            Intent myIntent = new Intent(HomeActivity.this,CoinActivity.class);
+            HomeActivity.this.startActivity(myIntent);
+        }
+
+        if (id == R.id.nav_dice ){
+            Intent myIntent = new Intent(HomeActivity.this,DiceActivity.class);
+            HomeActivity.this.startActivity(myIntent);
         }
 
         /*
