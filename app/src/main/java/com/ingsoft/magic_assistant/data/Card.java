@@ -15,7 +15,7 @@ public class Card implements Parcelable{
     private String imageName = "";
     private String layout = "";
     private String manaCost = "";
-    private int multiverseid = 0;
+    private int multiverseid ;
 
     @SerializedName("name")
     private String name = "";
