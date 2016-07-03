@@ -67,18 +67,29 @@
             android:name=".HomeActivity"
             android:label="@string/title_activity_home"
             android:theme="@style/Theme.AppCompat.NoActionBar" >
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".DiceActivity">
+        <activity android:name=".DiceActivity" >
         </activity>
-
         <activity android:name=".CoinActivity" >
+        </activity>
+        <activity
+            android:name=".EstadisticaListActivity"
+            android:label="@string/title_estadistica_list"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".EstadisticaDetailActivity"
+            android:label="@string/title_estadistica_detail"
+            android:parentActivityName=".EstadisticaListActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.ingsoft.magic_assistant.EstadisticaListActivity" />
         </activity>
     </application>
 

@@ -181,6 +181,12 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
             HomeActivity.this.startActivity(myIntent);
         }
 
+        if (id == R.id.nav_stats){
+            Intent myIntent = new Intent(HomeActivity.this,EstadisticaListActivity.class);
+            HomeActivity.this.startActivity(myIntent);
+        }
+
+
         /*
         Pueden venir otras ....
         */

@@ -11,6 +11,9 @@
         <item android:id="@+id/nav_dice" android:icon="@android:drawable/ic_search_category_default"
             android:title="Lanzar Dados" />
 
+        <item android:id="@+id/nav_stats" android:icon="@android:drawable/ic_search_category_default"
+            android:title="Ver Estadisticas" />
+
         <!-- Podrian ser varias-->
     </group>
 

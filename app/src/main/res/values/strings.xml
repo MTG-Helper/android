@@ -51,5 +51,7 @@
     <string name="downone">-1</string>
     <string name="upone">+1</string>
     <string name="title_activity_test">TestActivity</string>
+    <string name="title_estadistica_list">Estadisticas</string>
+    <string name="title_estadistica_detail">Estadistica Detail</string>
 
 </resources>
