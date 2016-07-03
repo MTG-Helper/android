@@ -2,12 +2,24 @@ package com.ingsoft.magic_assistant;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v4.app.ListFragment;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.ingsoft.magic_assistant.data.StatsData;
 import com.ingsoft.magic_assistant.services.StatsService;
+import com.ingsoft.magic_assistant.services.StatsServiceDummy;
+import com.ingsoft.magic_assistant.services.StatsServiceInstance;
+
+import java.util.List;
+
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 /**
  * A list fragment representing a list of Estadisticas. This fragment
@@ -19,6 +31,8 @@ import com.ingsoft.magic_assistant.services.StatsService;
  * interface.
  */
 public class EstadisticaListFragment extends ListFragment {
+
+    public StatsData estadisticas = new StatsData();
 
     /**
      * The serialization (saved instance state) Bundle key representing the
@@ -66,16 +80,42 @@ public class EstadisticaListFragment extends ListFragment {
     public EstadisticaListFragment() {
     }
 
+    private void obtenerEstadisticasPersonaje() {
+        StatsService dueloService = StatsServiceInstance.createStatsService();
+        Call<StatsData> estadisticas = dueloService.getStats();
+
+        estadisticas.enqueue(new Callback<StatsData>() {
+            @Override
+            public void onResponse(Response<StatsData> response, Retrofit retrofit) {
+                StatsData estadisticas = response.body();
+                mostrarCaracteristicasPersonaje(estadisticas);
+            }
+
+
+            @Override
+            public void onFailure(Throwable t) {
+                t.printStackTrace();
+                Log.e("MTGApp", t.getMessage());
+            }
+        });
+
+    }
+
+    private void mostrarCaracteristicasPersonaje( StatsData estadisticas) {
+        this.estadisticas = estadisticas;
+    }
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        obtenerEstadisticasPersonaje();
         // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<StatsService.Stats>(
+        setListAdapter(new ArrayAdapter<StatsServiceDummy.Stats>(
                 getActivity(),
                 android.R.layout.simple_list_item_activated_1,
                 android.R.id.text1,
-                StatsService.ITEMS));
+                estadisticas.toStats()));
     }
 
     @Override
@@ -115,7 +155,7 @@ public class EstadisticaListFragment extends ListFragment {
 
         // Notify the active callbacks interface (the activity, if the
         // fragment is attached to one) that an item has been selected.
-        mCallbacks.onItemSelected(StatsService.ITEMS.get(position).id);
+        mCallbacks.onItemSelected(StatsServiceDummy.ITEMS.get(position).id);
     }
 
     @Override

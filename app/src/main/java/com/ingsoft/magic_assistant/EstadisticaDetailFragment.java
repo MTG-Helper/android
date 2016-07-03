@@ -9,7 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.ingsoft.magic_assistant.services.StatsService;
+import com.ingsoft.magic_assistant.services.StatsServiceDummy;
 
 /**
  * A fragment representing a single Estadistica detail screen.
@@ -27,7 +27,7 @@ public class EstadisticaDetailFragment extends Fragment {
     /**
      * The dummy content this fragment is presenting.
      */
-    private StatsService.Stats mItem;
+    private StatsServiceDummy.Stats mItem;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -41,7 +41,7 @@ public class EstadisticaDetailFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
         if (getArguments().containsKey(ARG_ITEM_ID)) {
-            mItem = StatsService.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
+            mItem = StatsServiceDummy.ITEM_MAP.get(getArguments().getString(ARG_ITEM_ID));
 
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);

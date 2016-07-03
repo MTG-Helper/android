@@ -2,11 +2,23 @@ package com.ingsoft.magic_assistant;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.View;
+
+import com.ingsoft.magic_assistant.data.StatsData;
+import com.ingsoft.magic_assistant.services.StatsService;
+import com.ingsoft.magic_assistant.services.StatsServiceDummy;
+import com.ingsoft.magic_assistant.services.StatsServiceInstance;
+
+import retrofit.Call;
+import retrofit.Callback;
+import retrofit.Response;
+import retrofit.Retrofit;
 
 
 /**
