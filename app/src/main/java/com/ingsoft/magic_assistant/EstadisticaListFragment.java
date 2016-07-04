@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.ingsoft.magic_assistant.data.SingleStats;
 import com.ingsoft.magic_assistant.data.StatsData;
 import com.ingsoft.magic_assistant.services.StatsService;
 import com.ingsoft.magic_assistant.services.StatsServiceDummy;
@@ -34,7 +36,7 @@ public class EstadisticaListFragment extends ListFragment {
 
     public StatsData estadisticas = new StatsData();
 
-    /**
+    /**m
      * The serialization (saved instance state) Bundle key representing the
      * activated item position. Only used on tablets.
      */
@@ -102,7 +104,16 @@ public class EstadisticaListFragment extends ListFragment {
     }
 
     private void mostrarCaracteristicasPersonaje( StatsData estadisticas) {
-        this.estadisticas = estadisticas;
+        this.estadisticas.sum(estadisticas);
+        setListAdapter(
+
+
+                new ArrayAdapter<SingleStats>(
+                getActivity(),
+                android.R.layout.simple_list_item_activated_1,
+                android.R.id.text1,
+                estadisticas.toStats()));
+
     }
 
 
@@ -110,12 +121,6 @@ public class EstadisticaListFragment extends ListFragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         obtenerEstadisticasPersonaje();
-        // TODO: replace with a real list adapter.
-        setListAdapter(new ArrayAdapter<StatsServiceDummy.Stats>(
-                getActivity(),
-                android.R.layout.simple_list_item_activated_1,
-                android.R.id.text1,
-                estadisticas.toStats()));
     }
 
     @Override
