@@ -25,7 +25,7 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
 
     UserLife userLife;
     RivalLife rivalLife;
-    TextView userLifeText, rivalLifeText;
+    TextView userLifeText, rivalLifeText, userVenomText, rivalVenomText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +37,14 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
         userLife = new UserLife();
         rivalLife = new RivalLife();
         userLifeText = (TextView) findViewById(R.id.p1life);
+        userVenomText = (TextView) findViewById(R.id.p1venom);
         rivalLifeText = (TextView) findViewById(R.id.p2life);
+        rivalVenomText = (TextView) findViewById(R.id.p2venom);
         userLifeText.setText(userLife.toString());
         rivalLifeText.setText(rivalLife.toString());
+        userVenomText.setText(userLife.venonLevel.toString());
+        rivalVenomText.setText(rivalLife.venonLevel.toString());
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -108,21 +113,25 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
 
     public void incVenonP1(View view){
         userLife.incrementVenon();
+        userVenomText.setText(userLife.venonLevel.toString());
         this.decrement_and_lose(view, userLifeText, userLife);
     }
 
     public void decVenonP1(View view){
         userLife.decrementVenon();
+        userVenomText.setText(userLife.venonLevel.toString());
         this.decrement_and_lose(view, userLifeText, userLife);
     }
 
     public void incVenonP2(View view){
         rivalLife.incrementVenon();
+        rivalVenomText.setText(rivalLife.venonLevel.toString());
         this.decrement_and_lose(view, rivalLifeText, rivalLife);
     }
 
     public void decVenonP2(View view){
         rivalLife.decrementVenon();
+        rivalVenomText.setText(rivalLife.venonLevel.toString());
         this.decrement_and_lose(view, rivalLifeText, rivalLife);
     }
 
@@ -131,6 +140,8 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
         rivalLife = new RivalLife();
         userLifeText.setText(userLife.toString());
         rivalLifeText.setText(rivalLife.toString());
+        userVenomText.setText(userLife.venonLevel.toString());
+        rivalVenomText.setText(rivalLife.venonLevel.toString());
     }
 
     @Override
@@ -203,8 +214,8 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
     }
     public void search(View view)
     {
-        //go to CardListFragment
-
+        Intent myIntent = new Intent(HomeActivity.this,SearchMainActivity.class);
+        HomeActivity.this.startActivity(myIntent);
     }
 
 
