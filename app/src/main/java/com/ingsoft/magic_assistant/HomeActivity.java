@@ -189,4 +189,24 @@ public class HomeActivity extends AppCompatActivity implements DialogInterface.O
         drawer.closeDrawer(GravityCompat.START);
         return true;
         }
+
+    public void coin(View view)
+    {
+        Intent intent = new Intent(HomeActivity.this, CoinActivity.class);
+        startActivity(intent);
+    }
+
+    public void dice(View view)
+    {
+        Intent intent = new Intent(HomeActivity.this, DiceActivity.class);
+        startActivity(intent);
+    }
+    public void search(View view)
+    {
+        //go to CardListFragment
+
+    }
+
+
+
 }

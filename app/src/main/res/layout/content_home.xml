@@ -151,6 +151,34 @@
                     android:onClick="decVenonP2"
                     android:id="@+id/button10" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="20dp">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Coin"
+                    android:onClick="coin"
+                    android:id="@+id/coinButton" />
+                <Button
+                    android:layout_width="@dimen/nav_header_height"
+                    android:layout_height="70dp"
+                    android:text="Search"
+                    android:onClick="searchh"
+                    android:id="@+id/searchButton" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Dice"
+                    android:onClick="dice"
+                    android:id="@+id/diceButton" />
+
+            </LinearLayout>
+
         </LinearLayout>
 </LinearLayout>
 
