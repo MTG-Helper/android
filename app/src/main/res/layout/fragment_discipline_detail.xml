@@ -87,6 +87,15 @@
                 android:layout_marginRight="5dp"
                 android:textColor="#5a5656" />
 
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="@dimen/nav_header_height"
+                android:layout_height="wrap_content"
+                android:text="Load Portrait"
+                android:onClick="viewImage"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/viewImageId" />
+
             <ImageView
                 android:layout_width="223dp"
                 android:layout_height="311dp"
@@ -95,6 +104,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="35dp"
                 />
+
+
 
         </LinearLayout>
 

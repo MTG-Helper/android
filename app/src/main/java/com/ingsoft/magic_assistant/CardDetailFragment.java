@@ -39,22 +39,20 @@ public class CardDetailFragment extends Fragment {
         //((ImageView)getView().findViewById(R.id.imagendedeportedetalle)).setImageResource(card.getLogoResId());
 
 
-        //
-        //TODDO add button to load img
+
+
+        ///////
+        //IMG//
+        ///////
 
         // aphotecary geist
         //String url2 = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=409740&type=card";
         //String url = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=".concat(card.getMultiverseid()).concat("&type=card");
         //String url = "http://gatherer.wizards.com/Handlers/Image.ashx?multiverseid=" + card.getMultiverseid() +"&type=card";
 
-
         String portraitByName = "http://gatherer.wizards.com/Handlers/Image.ashx?size=small&type=card&name="+card.getName();
-        
-
         ImageLoader imageLoader = ImageLoader.getInstance(); // Get singleton instance
-
         imageLoader.init(ImageLoaderConfiguration.createDefault(this.getContext()));
-
         imageLoader.displayImage(portraitByName, (ImageView) getView().findViewById(R.id.imageView1));
 
     }
