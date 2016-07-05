@@ -1,7 +1,5 @@
 package com.ingsoft.magic_assistant.data;
 
-import com.ingsoft.magic_assistant.services.StatsServiceDummy;
-import com.ingsoft.magic_assistant.services.StatsServiceDummy.Stats;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -37,16 +35,16 @@ public class StatsData implements Serializable {
 
     public StatsData(){}
 
-    public List<SingleStats> toStats(){
-        List stats = new ArrayList<SingleStats>();
-        stats.add(new SingleStats("Cantidad de duelos" , quantityDuels));
-        stats.add(new SingleStats("Cantidad de duelos por partida" , quantityDuelsPerOpen));
-        stats.add(new SingleStats("Cantidad de imagenes de cartas descargadas" , quantityDownloadedCardsImages));
-        stats.add(new SingleStats("Cantidad de cartas buscadas" , quantitySearchedCards));
-        stats.add(new SingleStats("Cantidad de dados usados" , quantityUsedDice));
-        stats.add(new SingleStats("Cantidad de monedas usadas" , quantityUsedCoin));
-        stats.add(new SingleStats("Cantidad de victorias por vidas agotadas" , quantityLifeVictories));
-        stats.add(new SingleStats("Cantidad de victorias por venenos" , quantityPoisonVictories));
+    public List<String> toStats(){
+        List stats = new ArrayList<String>();
+        stats.add("Cantidad de duelos: " + String.valueOf(quantityDuels));
+        stats.add("Cantidad de duelos por partida: " + String.valueOf(quantityDuelsPerOpen));
+        stats.add("Cantidad de imagenes de cartas descargadas: " + String.valueOf(quantityDownloadedCardsImages));
+        stats.add("Cantidad de cartas buscadas: " + String.valueOf(quantitySearchedCards));
+        stats.add("Cantidad de dados usados: " + String.valueOf(quantityUsedDice));
+        stats.add("Cantidad de monedas usadas: " + String.valueOf(quantityUsedCoin));
+        stats.add("Cantidad de victorias por vidas agotadas: " + String.valueOf(quantityLifeVictories));
+        stats.add("Cantidad de victorias por venenos: " + String.valueOf(quantityPoisonVictories));
         return stats;
     }
 
